@@ -1,0 +1,12 @@
+function notifications(title,description)
+    file = fs.open('./Devos/sys32/temp/notifdata','w+')
+    file.write(title.."%20"..description)
+    file.close()
+end
+
+function openProgram(path, title, resizable, sizex, sizey)
+    file = fs.open('./Devos/sys32/temp/programdata','w+')
+    file.write(path.."%20"..title.."%20"..tostring(resizable).."%20"..sizex.."%20"..sizey)
+    file.close()
+end
+
